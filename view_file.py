@@ -1,11 +1,23 @@
 from fastapi import APIRouter, UploadFile, File
 from typing import List
+from fastapi.responses import FileResponse
 
 
 router = APIRouter(
     prefix="/file",
     responses={404: {"description": "Sorry Not found"}},
 )
+
+
+@router.get("/")
+async def get_file():
+    """
+    """
+    return FileResponse(
+        'view_file.py',
+        media_type='text',
+        filename='file_name.py'
+    )
 
 
 @router.post("/upload")
