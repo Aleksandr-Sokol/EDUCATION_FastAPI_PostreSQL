@@ -15,3 +15,7 @@ class DataBaseSchema(BaseModel):
 
 class DataSchema(DataBaseSchema):
     id: int
+
+
+class MessageSchema(BaseModel):
+    text: str
