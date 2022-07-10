@@ -1,3 +1,16 @@
+Старт:
+uvicorn app:my_api --reload
+
+Настройка миграций
+pip install alembic
+Создать папку с миграциями
+alembic init migrations
+создать файл с миграцией
+alembic revision --autogenerate -m "My commit 1"
+выполнить миграцию
+alembic migrate head
+
+
 https://fastapi.tiangolo.com/tutorial/
 https://stackoverflow.com/questions/63048825/how-to-upload-file-using-fastapi
 
