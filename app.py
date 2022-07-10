@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from view import router
+from view import router as data_router
+from view_file import router as file_router
 
 my_api = FastAPI()
 
@@ -8,4 +9,5 @@ async def root():
     return {"message": "Hello World"}
 
 
-my_api.include_router(router)
+my_api.include_router(data_router)
+my_api.include_router(file_router)
