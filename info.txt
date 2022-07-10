@@ -1,0 +1,24 @@
+https://fastapi.tiangolo.com/tutorial/
+https://stackoverflow.com/questions/63048825/how-to-upload-file-using-fastapi
+
+Знакомство с FastAPI
+https://habr.com/ru/post/488468/
+https://habr.com/ru/post/513328/
+
+Pydantic — умопомрачительная валидация данных на Python
+https://www.youtube.com/watch?v=dOO3GmX6ukU&t=1s
+
+Pydantic Library Types
+https://pydantic-docs.helpmanual.io/usage/types/
+
+fastapi databases async запросы
+https://www.youtube.com/watch?v=CcsbCRzaxoE
+
+https://www.starlette.io/events/
+
+fastapi-microblog
+https://www.youtube.com/watch?v=WkqM_SIXEuQ
+https://www.youtube.com/watch?v=AXYgXpHJhBA
+https://www.youtube.com/watch?v=eXj1gdDLKho
+https://github.com/DJWOMS/fastapi-microblog/
+https://www.youtube.com/watch?v=hmZe7gOrdSo&list=PLaED5GKTiQG8GW5Rv2hf3tRS-d9t9liUt&index=3
