@@ -1,5 +1,5 @@
 Старт:
-uvicorn app:my_api --reload
+uvicorn app:my_api --port 5005 --reload
 
 Настройка миграций
 pip install alembic
