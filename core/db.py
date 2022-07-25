@@ -8,13 +8,14 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import AsyncGenerator
 
-SQLALCHEMY_DATABASE_URI = "sqlite:///example.db"  # Для синхронного запуска
-SQLALCHEMY_ASYNC_DATABASE_URI = "sqlite+aiosqlite:///example.db"  # Для асинхронного запуска
-# postgresql+asyncpg
+# SQLALCHEMY_DATABASE_URI = "sqlite:///example.db"  # Для синхронного запуска sqlite
+# SQLALCHEMY_DATABASE_URI = "sqlite+aiosqlite:///example.db"  # Для асинхронного запуска sqlite
+SQLALCHEMY_DATABASE_URI = "postgresql+asyncpg://postgres:postgres@db:5432/postgres"  # Для асинхронного запуска postgres
 
 
 engine = create_engine(SQLALCHEMY_DATABASE_URI, connect_args={"check_same_thread": False})
-async_engine = create_async_engine(SQLALCHEMY_ASYNC_DATABASE_URI, connect_args={"check_same_thread": False})
+# check_same_thread - для sqlite
+async_engine = create_async_engine(SQLALCHEMY_DATABASE_URI)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 SessionAsync = sessionmaker(autocommit=False, autoflush=False, bind=async_engine)
 async_session = sessionmaker(async_engine, class_=AsyncSession, expire_on_commit=False)

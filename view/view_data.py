@@ -15,7 +15,7 @@ router = APIRouter(
 
 
 @router.get("/{data_id}", response_model=DataSchema)
-async def data(data_id, db: Session = Depends(get_async_db)) -> DataSchema:
+async def data(data_id: int, db: Session = Depends(get_async_db)) -> DataSchema:
     data_crud = DataCRUD()
     # Для синхронного запуска
     # data_i = data_crud.get(db, data_id)
