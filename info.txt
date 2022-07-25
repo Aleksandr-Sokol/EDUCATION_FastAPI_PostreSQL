@@ -1,3 +1,7 @@
+Версия python 3.10
+Шаблон для работы с FastAPI
+Не является реальным проектом
+
 Старт:
 uvicorn app:my_api --port 5005 --reload
 
@@ -35,3 +39,7 @@ https://www.youtube.com/watch?v=AXYgXpHJhBA
 https://www.youtube.com/watch?v=eXj1gdDLKho
 https://github.com/DJWOMS/fastapi-microblog/
 https://www.youtube.com/watch?v=hmZe7gOrdSo&list=PLaED5GKTiQG8GW5Rv2hf3tRS-d9t9liUt&index=3
+
+pip freeze > requirements.txt
+Установка всех пакетов по списку производится при выполнении:
+pip install -r requirements.txt

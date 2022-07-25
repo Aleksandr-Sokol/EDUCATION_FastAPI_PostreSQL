@@ -26,7 +26,7 @@ async def upload(file: UploadFile = File(None)):
     multipart у файла должно быть имя file
     """
     contents = await file.read()
-    return contents\
+    return contents
 
 
 @router.post("/uploads")
