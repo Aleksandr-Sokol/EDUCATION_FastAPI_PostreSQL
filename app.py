@@ -1,8 +1,5 @@
 from fastapi import FastAPI
-from view import router as data_router
-from view_file import router as file_router
-from tasks import router as task_router
-from view_template import router as template_router
+from view import *
 
 
 my_api = FastAPI()
