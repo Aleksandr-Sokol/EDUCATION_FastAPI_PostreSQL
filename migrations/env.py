@@ -7,10 +7,11 @@ from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlmodel import SQLModel
 
 from alembic import context
+from core import *  # Для обновление всей БД
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
-from core.db import SQLALCHEMY_DATABASE_URI
+# from core.db import SQLALCHEMY_DATABASE_URI
 
 config = context.config
 
@@ -21,8 +22,8 @@ fileConfig(config.config_file_name)
 # add your model's MetaData object here
 # for 'autogenerate' support
 # from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
-target_metadata = SQLModel.metadata
+target_metadata = Base.metadata
+# target_metadata = SQLModel.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
@@ -42,9 +43,9 @@ def run_migrations_offline():
     script output.
 
     """
-    url = config.get_main_option(SQLALCHEMY_DATABASE_URI)
+    # url = config.get_main_option(SQLALCHEMY_DATABASE_URI)
     context.configure(
-        url=url,
+        url="postgresql+asyncpg://postgres:postgres@db:5432/postgres",
         target_metadata=target_metadata,
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},

@@ -2,8 +2,13 @@
 Шаблон для работы с FastAPI
 Не является реальным проектом
 
+После запуска в контейнере выролнить:
+docker-compose exec alembic revision --autogenerate -m "My commit 1"
+docker-compose exec web alembic upgrade head
+
 Старт:
 uvicorn app:my_api --port 5005 --reload
+
 
 Настройка миграций
 pip install alembic
@@ -13,7 +18,8 @@ docker-compose exec web alembic init -t async migrations - для ассинхр
 создать файл с миграцией
 alembic revision --autogenerate -m "My commit 1"
 выполнить миграцию
-alembic migrate head
+alembic upgrade head
+docker-compose exec web alembic upgrade head
 
 Как настроить SQLAlchemy, SQLModel и Alembic для асинхронной работы с FastAPI
 https://habr.com/ru/post/580866/
