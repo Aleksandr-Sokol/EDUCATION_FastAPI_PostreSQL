@@ -7,7 +7,7 @@ docker-compose exec alembic revision --autogenerate -m "My commit 1"
 docker-compose exec web alembic upgrade head
 
 Старт:
-uvicorn app:my_api --port 5005 --reload
+uvicorn app:my_app --port 5005 --reload
 
 
 Настройка миграций
