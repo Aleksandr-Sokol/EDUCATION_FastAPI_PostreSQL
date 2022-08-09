@@ -17,37 +17,13 @@ alembic init migrations - для синхронной работы
 docker-compose exec web alembic init -t async migrations - для ассинхронной (запуск через docker)
 создать файл с миграцией
 alembic revision --autogenerate -m "My commit 1"
+--autogenerate - обязательно, для создания таблиц.
+Если не работает, то alembic stamp head
+
 выполнить миграцию
 alembic upgrade head
 docker-compose exec web alembic upgrade head
 
-Как настроить SQLAlchemy, SQLModel и Alembic для асинхронной работы с FastAPI
-https://habr.com/ru/post/580866/
-
-https://fastapi.tiangolo.com/tutorial/
-https://stackoverflow.com/questions/63048825/how-to-upload-file-using-fastapi
-
-Знакомство с FastAPI
-https://habr.com/ru/post/488468/
-https://habr.com/ru/post/513328/
-
-Pydantic — умопомрачительная валидация данных на Python
-https://www.youtube.com/watch?v=dOO3GmX6ukU&t=1s
-
-Pydantic Library Types
-https://pydantic-docs.helpmanual.io/usage/types/
-
-fastapi databases async запросы
-https://www.youtube.com/watch?v=CcsbCRzaxoE
-
-https://www.starlette.io/events/
-
-fastapi-microblog
-https://www.youtube.com/watch?v=WkqM_SIXEuQ
-https://www.youtube.com/watch?v=AXYgXpHJhBA
-https://www.youtube.com/watch?v=eXj1gdDLKho
-https://github.com/DJWOMS/fastapi-microblog/
-https://www.youtube.com/watch?v=hmZe7gOrdSo&list=PLaED5GKTiQG8GW5Rv2hf3tRS-d9t9liUt&index=3
 
 pip freeze > requirements.txt
 Установка всех пакетов по списку производится при выполнении:
