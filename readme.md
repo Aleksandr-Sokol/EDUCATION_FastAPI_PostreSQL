@@ -30,6 +30,7 @@
 - [Pydantic Library Types](https://pydantic-docs.helpmanual.io/usage/types/)
 - [fastapi databases async запросы](https://www.youtube.com/watch?v=CcsbCRzaxoE)
 - https://www.starlette.io/events/
+- [FastAPI с аутентификации на основе токенов JWT](https://testdriven.io/blog/fastapi-jwt-auth/)
 
 fastapi-microblog:
 - https://www.youtube.com/watch?v=WkqM_SIXEuQ
