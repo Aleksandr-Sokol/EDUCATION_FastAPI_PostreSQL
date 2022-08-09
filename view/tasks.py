@@ -7,6 +7,7 @@ router = APIRouter(
     responses={404: {"description": "Sorry Not found"}},
 )
 
+
 def sleep_task(message: str):
     sleep(10)
     print(f'sleep_task: {message}')

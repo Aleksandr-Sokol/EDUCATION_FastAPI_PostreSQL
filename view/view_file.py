@@ -9,12 +9,12 @@ router = APIRouter(
 )
 
 
-@router.get("/")
-async def get_file():
+@router.get("/download")
+async def get_file(name: str):
     """
     """
     return FileResponse(
-        'view_file.py',
+        name,
         media_type='text',
         filename='file_name.py'
     )
